@@ -1,0 +1,48 @@
+{
+  "name": "imapical",
+  "version": "1.0.0",
+  "description": "Find emails with ical attachments via imap",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "test": "ava"
+  },
+  "keywords": [
+    "imap",
+    "ical"
+  ],
+  "author": "Dave Irvine <dave@daveirvine.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "faker": "^4.1.0",
+    "proxyquire": "^1.8.0",
+    "sinon": "^4.0.1",
+    "webpack": "^3.8.1"
+  },
+  "ava": {
+    "require": "babel-register",
+    "babel": "inherit",
+    "verbose": true
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current",
+            "uglify": true
+          }
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "emailjs-imap-client": "^2.0.8",
+    "ical-expander": "^1.1.2",
+    "node-forge": "^0.7.1"
+  }
+}
