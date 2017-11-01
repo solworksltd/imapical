@@ -12,10 +12,18 @@ class ImapIcal {
       },
     };
 
-    this.mailboxBrowser = new ImapClient(this.opts.host, this.opts.port || this.opts, this.opts);
-    this.mailboxBrowser.logLevel = this.mailboxBrowser.LOG_LEVEL_NONE;
+    this.createMailboxBrowser();
 
     this.clients = [];
+  }
+
+  createMailboxBrowser() {
+    return new Promise((resolve, reject) => {
+      this.mailboxBrowser = new ImapClient(this.opts.host, this.opts.port || this.opts, this.opts);
+      this.mailboxBrowser.logLevel = this.mailboxBrowser.LOG_LEVEL_NONE;
+
+      return resolve();
+    });
   }
 
   createMailboxClient(mailbox) {
@@ -56,12 +64,17 @@ class ImapIcal {
         return client.close();
       })
     ).then(() => {
+      this.clients = [];
       return this.mailboxBrowser.close();
+    }).then(() => {
+      delete this.mailboxBrowser;
     });
   }
 
   listMailboxes() {
-    return this.mailboxBrowser.connect().then(() => {
+    return this.createMailboxBrowser().then(() => {
+      return this.mailboxBrowser.connect();
+    }).then(() => {
       return this.mailboxBrowser.listMailboxes().then((mailboxResults) => {
         return mailboxResults.children;
       });
