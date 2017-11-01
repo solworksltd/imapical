@@ -1,0 +1,55 @@
+[
+  {
+    "bodystructure": {
+      "type": "text/calendar",
+      "parameters": {
+        "charset": "us-ascii",
+        "name": "invite.ics"
+      },
+      "encoding": "7bit",
+      "size": 452,
+      "lineCount": 18,
+      "disposition": "attachment",
+      "dispositionParameters": {
+        "filename": "invite.ics"
+      }
+    }
+  },
+  {
+    "bodystructure": {
+      "childNodes": [
+        {
+          "part": "1",
+          "type": "text/plain",
+          "parameters": {
+            "charset": "iso-8859-1"
+          },
+          "encoding": "quoted-printable",
+          "size": 18,
+          "lineCount": 2
+        },
+        {
+          "part": "2",
+          "type": "text/html",
+          "parameters": {
+            "charset": "iso-8859-1"
+          },
+          "encoding": "quoted-printable",
+          "size": 471,
+          "lineCount": 16
+        },
+        {
+          "part": "3",
+          "type": "text/calendar",
+          "parameters": {
+            "charset": "utf-8",
+            "method": "REQUEST"
+          },
+          "encoding": "base64",
+          "size": 2280,
+          "lineCount": 30
+        }
+      ]
+    }
+  }
+]

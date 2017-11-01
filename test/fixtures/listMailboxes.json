@@ -1,0 +1,83 @@
+{
+  "root": true,
+  "children": [
+    {
+      "name": "INBOX",
+      "delimiter": "/",
+      "path": "INBOX",
+      "children": [],
+      "flags": [
+        "\\HasNoChildren"
+      ],
+      "listed": true,
+      "subscribed": true
+    },
+    {
+      "name": "Drafts",
+      "delimiter": "/",
+      "path": "Drafts",
+      "children": [],
+      "flags": [
+        "\\Noinferiors",
+        "\\Drafts"
+      ],
+      "listed": true,
+      "specialUse": "\\Drafts",
+      "specialUseFlag": "\\Drafts",
+      "subscribed": true
+    },
+    {
+      "name": "Templates",
+      "delimiter": "/",
+      "path": "Templates",
+      "children": [],
+      "flags": [
+        "\\Noinferiors"
+      ],
+      "listed": true,
+      "subscribed": true
+    },
+    {
+      "name": "Sent",
+      "delimiter": "/",
+      "path": "Sent",
+      "children": [],
+      "flags": [
+        "\\Noinferiors",
+        "\\Sent"
+      ],
+      "listed": true,
+      "specialUse": "\\Sent",
+      "specialUseFlag": "\\Sent",
+      "subscribed": true
+    },
+    {
+      "name": "Spam",
+      "delimiter": "/",
+      "path": "Spam",
+      "children": [],
+      "flags": [
+        "\\Noinferiors",
+        "\\Junk"
+      ],
+      "listed": true,
+      "specialUse": "\\Junk",
+      "specialUseFlag": "\\Junk",
+      "subscribed": true
+    },
+    {
+      "name": "Trash",
+      "delimiter": "/",
+      "path": "Trash",
+      "children": [],
+      "flags": [
+        "\\HasNoChildren",
+        "\\Trash"
+      ],
+      "listed": true,
+      "specialUse": "\\Trash",
+      "specialUseFlag": "\\Trash",
+      "subscribed": true
+    }
+  ]
+}
