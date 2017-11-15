@@ -42,6 +42,8 @@ class ImapIcal {
       }).then(() => {
         client.mailbox = mailbox.path;
         return resolve(client);
+      }).catch((err) => {
+        return reject(err);
       });
     });
   }
